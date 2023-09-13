@@ -100,6 +100,7 @@
   # $ nix search wget
 users.defaultUserShell = pkgs.powershell;
 environment.shells = with pkgs; [ powershell ];
+virtualisation.docker.enable = true;
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget	
@@ -108,6 +109,8 @@ powershell
  gh
 gnome.gedit
 gnome.gnome-terminal
+unzip
+nodejs_18
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
