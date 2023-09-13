@@ -51,12 +51,12 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "de";
+    layout = "us, de";
     xkbVariant = "";
   };
 
   # Configure console keymap
-  console.keyMap = "de";
+  console.keyMap = "us";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -111,8 +111,13 @@ gnome.gedit
 gnome.gnome-terminal
 unzip
 nodejs_18
+alacritty
+rustup
+go
+zellij
+tipp10
+neovim
   ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -141,3 +146,4 @@ nodejs_18
   system.stateVersion = "23.05"; # Did you read the comment?
 
 }
+
