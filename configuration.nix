@@ -111,12 +111,19 @@ gnome.gedit
 gnome.gnome-terminal
 unzip
 nodejs_18
-alacritty
-rustup
 go
 zellij
 tipp10
 neovim
+vscode
+gotools
+alacritty
+libreoffice
+lapce
+bat
+fd
+ripgrep
+cargo
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
