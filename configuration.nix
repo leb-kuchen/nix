@@ -8,7 +8,9 @@
       ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings.allowed-users = ["lebkuchen"];
     # Bootloader.
+
     boot.loader.systemd-boot.enable = true; boot.loader.efi.canTouchEfiVariables = true;
 
     networking.hostName = "nixos"; # Define your hostname.
@@ -94,7 +96,28 @@
     gh
     alacritty
     wget
+    zellij
+    chromium
+    libreoffice
+    psmisc
+    minikube
+    gcc
+  procps
+  dart-sass
+  nodejs
+   nodePackages.postcss
+   nodePackages.postcss-cli
+   gcc
+   rustup
+   ocaml
+   opam
+
+  dune_3
+  tree
+  evcxr
 	];
+
+
 
     # List packages installed in system profile. To search, run: $ nix search wget
   users.defaultUserShell = pkgs.powershell; environment.shells = with pkgs; [ powershell ]; virtualisation.docker.enable = true;
