@@ -131,7 +131,7 @@ xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   nodejs
    nodePackages.postcss
    nodePackages.postcss-cli
-   gcc
+   
    rustup
    ocaml
    opam
@@ -141,7 +141,11 @@ xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   evcxr
   nushell
   kitty
-
+  waybar
+  dunst
+  libnotify
+  swww
+  rofi-wayland
 	];
 
 
