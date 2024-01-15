@@ -31,7 +31,7 @@
       "de_DE.UTF-8"; LC_TELEPHONE = "de_DE.UTF-8"; LC_TIME = "de_DE.UTF-8";
     };
 
-   
+  programs.hyprland.enable = true;   
 
 
 
@@ -85,6 +85,7 @@
 
 	environment.systemPackages = with pkgs; [
 		neovim
+    vim
 		powershell
 		go 
 		git
@@ -115,6 +116,9 @@
   dune_3
   tree
   evcxr
+  nushell
+  kitty
+
 	];
 
 
