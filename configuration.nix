@@ -148,7 +148,9 @@ xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   rofi-wayland
 	];
 
-
+fonts.packages = with pkgs; [
+  (nerdfonts.override { fonts = [ "FiraCode" ]; })
+];
 
     # List packages installed in system profile. To search, run: $ nix search wget
   users.defaultUserShell = pkgs.powershell; environment.shells = with pkgs; [ powershell ]; virtualisation.docker.enable = true;
