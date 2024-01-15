@@ -33,7 +33,6 @@
 
 programs.hyprland = {
   enable = true;
-  nvidiaPatches = true;
   xwayland.enable = true;
 };
 
@@ -51,10 +50,7 @@ environment.sessionVariables = {
   NIXOS_OZONE_WL = "1";
 };
 #waybar
-(pkgs.waybar.overrideAttrs (oldAttrs: {
-    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-  })
-)
+
 #XDG portal
 xdg.portal.enable = true;
 xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
