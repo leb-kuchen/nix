@@ -31,10 +31,33 @@
       "de_DE.UTF-8"; LC_TELEPHONE = "de_DE.UTF-8"; LC_TIME = "de_DE.UTF-8";
     };
 
-  programs.hyprland.enable = true;   
+programs.hyprland = {
+  enable = true;
+  nvidiaPatches = true;
+  xwayland.enable = true;
+};
 
 
+hardware = {
+    opengl.enable = true;
 
+ #Most wayland compositors need this
+    nvidia.modesetting.enable = true;
+};
+environment.sessionVariables = {
+ # If your cursor becomes invisible
+  WLR_NO_HARDWARE_CURSORS = "1";
+ # Hint electron apps to use wayland
+  NIXOS_OZONE_WL = "1";
+};
+#waybar
+(pkgs.waybar.overrideAttrs (oldAttrs: {
+    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+  })
+)
+#XDG portal
+xdg.portal.enable = true;
+xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
 
     # Configure keymap in X11
